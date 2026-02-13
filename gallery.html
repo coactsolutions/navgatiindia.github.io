@@ -196,7 +196,7 @@ h1{
 .lightbox img{
   max-width:90%;
   max-height:80%;
-  margin-bottom:20px;
+  margin-top:60px;   /* ← moves image downward */
 }
 
 /* Top Buttons */
@@ -224,7 +224,8 @@ h1{
 /* Arrows */
 .arrow{
   position:absolute;
-  bottom:40px;      /* ← controls how low they sit */
+  top:50%;
+  transform:translateY(-50%);
   font-size:50px;
   color:white;
   cursor:pointer;
