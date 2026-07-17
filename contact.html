@@ -1,247 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | NAVGATI INDIA PVT. LTD.</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Us | NAVGATI INDIA PVT. LTD.</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0b0f19;
-      color: #fff;
-    }
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-    /* -------------------- CONTACT HEADER -------------------- */
-    .contact-header {
-      position: relative;
-      height: 60vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-align: center;
-      background: url('contact-big.jpg') no-repeat center center/cover;
-      overflow: hidden;
-    }
+<style>
+:root{
+  --nv-ink:#0B1B2E; --nv-steel:#3E5C74; --nv-steel-light:#5D7E99;
+  --nv-paper:#EDEAE2; --nv-muted:#9FB0C3; --nv-text:#3E4B5C;
+}
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:var(--nv-paper);
+  color:var(--nv-ink);
+}
 
-    /* Animated gradient overlay */
-    .contact-header::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(-45deg, rgba(0,74,173,0.6), rgba(0,0,0,0.7), rgba(0,74,173,0.4), rgba(0,0,0,0.6));
-      background-size: 400% 400%;
-      animation: gradientMove 8s ease infinite;
-      z-index: 1;
-    }
+/* -------------------- HERO -------------------- */
+.ct2-hero{
+  background:var(--nv-ink);
+  padding:170px 24px 90px;
+  text-align:center;
+}
+.ct2-eyebrow{
+  display:block; font-family:'Space Grotesk',sans-serif; font-size:13px;
+  letter-spacing:0.14em; text-transform:uppercase; color:#8FB2CC; margin-bottom:14px;
+}
+.ct2-hero h1{
+  font-family:'Space Grotesk',sans-serif; font-weight:700; color:#fff;
+  font-size:clamp(32px,5vw,48px); margin:0 0 14px; line-height:1.15;
+}
+.ct2-hero p{
+  color:#D9E1EA; font-size:16px; line-height:1.6; max-width:520px; margin:0 auto;
+}
 
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+/* -------------------- CONTACT SECTION -------------------- */
+.ct2-wrapper{
+  max-width:1180px; margin:0 auto; padding:0 24px 110px;
+  transform:translateY(-56px);
+}
+.ct2-section{
+  display:flex; align-items:flex-start; flex-wrap:wrap; gap:32px;
+}
 
-    .contact-header h1, .contact-header p {
-      position: relative;
-      z-index: 2;
-    }
+.ct2-left{ flex:1 1 340px; max-width:400px; }
+.ct2-left img{
+  width:100%; border-radius:4px; display:block; margin-bottom:24px;
+  box-shadow:0 20px 40px rgba(11,27,46,0.18);
+}
 
-    .contact-header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-      letter-spacing: 1px;
-    }
+.ct2-info-box{
+  background:#fff; border:1px solid rgba(11,27,46,0.08); border-radius:4px;
+  padding:20px 22px; margin-bottom:14px; display:flex; align-items:flex-start;
+  gap:16px; transition:border-color .25s ease, box-shadow .25s ease;
+}
+.ct2-info-box:hover{ border-color:var(--nv-steel); box-shadow:0 12px 28px rgba(11,27,46,0.08); }
+.ct2-info-box i{
+  color:var(--nv-steel); font-size:1.1rem; flex-shrink:0; margin-top:3px;
+}
+.ct2-info-box .ct2-info-text{ font-size:14.5px; color:var(--nv-text); line-height:1.5; }
+.ct2-info-box strong{
+  display:block; color:var(--nv-ink); margin-bottom:4px;
+  font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px;
+}
 
-    .contact-header p {
-      font-size: 1.1rem;
-      color: #e0e0e0;
-      max-width: 600px;
-      margin: 0 auto;
-    }
+.ct2-right{
+  flex:1 1 460px;
+  background:#fff; border:1px solid rgba(11,27,46,0.08); border-radius:4px;
+  padding:44px; box-shadow:0 20px 44px rgba(11,27,46,0.10);
+}
+.ct2-right .ct2-eyebrow{ color:var(--nv-steel); }
+.ct2-right h2{
+  margin:0 0 12px; color:var(--nv-ink);
+  font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:26px;
+}
+.ct2-right p{ color:var(--nv-text); margin:0 0 28px; font-size:15px; line-height:1.6; }
 
-    /* -------------------- CONTACT SECTION -------------------- */
-    .contact-section {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 40px;
-      padding: 60px 5%;
-    }
+.ct2-form{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.ct2-form input,
+.ct2-form textarea{
+  width:100%; padding:13px 14px;
+  background:var(--nv-paper); border:1px solid rgba(11,27,46,0.12);
+  border-radius:4px; color:var(--nv-ink); font-family:'Inter',sans-serif;
+  font-size:14.5px; outline:none; transition:border-color .25s ease, background .25s ease;
+}
+.ct2-form input::placeholder,
+.ct2-form textarea::placeholder{ color:var(--nv-muted); }
+.ct2-form input:focus,
+.ct2-form textarea:focus{ border-color:var(--nv-steel); background:#fff; }
+.ct2-form textarea{ grid-column:span 2; resize:none; height:130px; }
 
-    .contact-left {
-      flex: 1 1 380px;
-      max-width: 420px;
-    }
+.ct2-right button{
+  grid-column:span 2;
+  background:var(--nv-steel); border:none; color:#fff;
+  padding:15px; border-radius:4px; font-family:'Space Grotesk',sans-serif;
+  font-size:15px; font-weight:600; letter-spacing:0.02em; cursor:pointer;
+  transition:background .25s ease;
+}
+.ct2-right button:hover{ background:var(--nv-ink); }
 
-    .contact-left img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-      margin-bottom: 25px;
-    }
-
-    .info-box {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 10px;
-      padding: 18px 20px;
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      transition: 0.3s;
-    }
-
-    .info-box:hover {
-      border-color: #004aad;
-      background: rgba(0,74,173,0.08);
-    }
-
-    .info-box i {
-      color: #004aad;
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-
-    .info-box .info-text {
-      font-size: 0.95rem;
-      color: #ccc;
-    }
-
-    .info-box strong {
-      display: block;
-      color: #fff;
-      margin-bottom: 3px;
-      font-weight: 600;
-    }
-
-    .contact-right {
-      flex: 1 1 480px;
-      background: rgba(255,255,255,0.05);
-      border-radius: 12px;
-      padding: 40px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-    }
-
-    .contact-right h2 {
-      margin-bottom: 15px;
-      color: #fff;
-      font-size: 1.6rem;
-    }
-
-    .contact-right p {
-      color: #bbb;
-      margin-bottom: 25px;
-      font-size: 0.95rem;
-    }
-
-    .contact-form {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 12px 14px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 8px;
-      color: #fff;
-      font-size: 0.95rem;
-      outline: none;
-      transition: border 0.3s;
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      border-color: #004aad;
-    }
-
-    .contact-form textarea {
-      grid-column: span 2;
-      resize: none;
-      height: 120px;
-    }
-
-    .contact-right button {
-      grid-column: span 2;
-      background: linear-gradient(90deg, #004aad, #006eff);
-      border: none;
-      color: #fff;
-      padding: 12px;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .contact-right button:hover {
-      background: linear-gradient(90deg, #003080, #0058cc);
-    }
-
-    @media (max-width: 900px) {
-      .contact-form {
-        grid-template-columns: 1fr;
-      }
-      .contact-header {
-        height: 60vh;
-      }
-    }
-
-  </style>
+@media (max-width:900px){
+  .ct2-hero{ padding:150px 24px 70px; }
+  .ct2-wrapper{ transform:none; padding-top:56px; }
+  .ct2-form{ grid-template-columns:1fr; }
+  .ct2-form textarea, .ct2-right button{ grid-column:span 1; }
+}
+</style>
 </head>
 
 <body>
-  <!-- Contact Header -->
-  <section class="contact-header">
-    <h1>Contact Us</h1>
-    <p>Reach out to us — we’re just a message away.</p>
-  </section>
 
-  <!-- Contact Section -->
-  <section class="contact-section">
-    <div class="contact-left">
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html"><img src="logo.bmp" alt="NAVGATI LOGO"></a>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-link">Services ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="engineering.html" class="dropdown-item">Engineering Services</a></li>
+            <li><a href="software.html" class="dropdown-item">Software Services</a></li>
+          </ul>
+        </li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="ct2-hero">
+  <span class="ct2-eyebrow">// Contact</span>
+  <h1>Contact Us</h1>
+  <p>Reach out to us — we're just a message away.</p>
+</section>
+
+<!-- CONTACT SECTION -->
+<div class="ct2-wrapper">
+  <div class="ct2-section">
+
+    <div class="ct2-left">
       <img src="contact-image.jpg" alt="Contact Navgati">
 
-      <div class="info-box">
+      <div class="ct2-info-box">
         <i class="fas fa-map-marker-alt"></i>
-        <div class="info-text">
+        <div class="ct2-info-text">
           <strong>Address</strong>
-           F.No. 305 Block-A2, Bhawani Shankar Adobe, Ayodhya Square Bhopal(M.P)-462041
+          F.No. 305 Block-A2, Bhawani Shankar Adobe, Ayodhya Square Bhopal (M.P) - 462041
         </div>
       </div>
 
-      <div class="info-box">
+      <div class="ct2-info-box">
         <i class="fas fa-envelope"></i>
-        <div class="info-text">
+        <div class="ct2-info-text">
           <strong>Email</strong>
-          info@coactsolutions.in
+          info@navgatiindia.com
         </div>
       </div>
 
-      <div class="info-box">
+      <div class="ct2-info-box">
         <i class="fas fa-phone"></i>
-        <div class="info-text">
+        <div class="ct2-info-text">
           <strong>Phone</strong>
           +91-9876543210
         </div>
       </div>
     </div>
 
-    <div class="contact-right">
-      <h2>Get in Touch</h2>
+    <div class="ct2-right">
+      <span class="ct2-eyebrow">// Get in Touch</span>
+      <h2>Send Us A Message</h2>
       <p>Contact our team for any technical, software, or engineering service enquiries.</p>
 
-      <form class="contact-form">
+      <form class="ct2-form">
         <input type="text" placeholder="Your Name" required>
         <input type="email" placeholder="Your Email" required>
         <input type="text" placeholder="Your Company">
@@ -250,26 +198,10 @@
         <button type="submit">Send Message</button>
       </form>
     </div>
-  </section>
-  <!-- Back to Home Button -->
-<div style="text-align:center; margin-bottom: 50px;">
-  <a href="index.html" 
-     style="
-        padding: 12px 25px;
-        background: linear-gradient(90deg,#e3bcec,#006eff);
-        color: white;
-        text-decoration: none;
-        font-size: 1.1rem;
-        border-radius: 8px;
-        font-weight: 600;
-        box-shadow: 0 5px 18px rgba(0,0,0,0.4);
-        transition: 0.3s;
-     "
-     onmouseover="this.style.background='linear-gradient(90deg,#003080,#0058cc)'"
-     onmouseout="this.style.background='linear-gradient(90deg,#004aad,#006eff)'">
-     ⬅ Back to Home
-  </a>
+
+  </div>
 </div>
 
+<script src="navbar.js"></script>
 </body>
 </html>
